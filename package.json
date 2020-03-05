@@ -1,0 +1,28 @@
+{
+  "name": "webcomponents",
+  "version": "1.0.0",
+  "description": "a small component library using lit",
+  "main": "index.js",
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saske505/webcomponents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saske505/webcomponents/issues"
+  },
+  "homepage": "https://github.com/saske505/webcomponents#readme"
+}

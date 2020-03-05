@@ -1,5 +1,4 @@
 # webcomponents
 a small component library using lit
 
-git config --global user.email "ratpack505@gmail.com"
-git config --global user.name "Stephan Maree"
+![CI](https://github.com/saske505/webcomponents/workflows/CI/badge.svg?branch=dev&event=watch)
