@@ -1,7 +1,8 @@
-import FilteredContainer from "./filteredContainer/script";
-import Card from './card/script';
-
+import FilteredContainer from "./filteredContainer/filteredContainer";
+import Card from './card/card';
+import FabButton from './fabButton/fabButton';
 export default {
     FilteredContainer,
-    Card
+    Card,
+    FabButton
 };

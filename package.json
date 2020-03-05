@@ -4,9 +4,11 @@
     "description": "a small component library using lit",
     "main": "index.js",
     "dependencies": {
+        "@types/typescript": "^2.0.0",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "lit-element": "^2.2.1",
-        "style-loader": "^1.1.3"
+        "style-loader": "^1.1.3",
+        "typescript": "^3.8.3"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",
@@ -31,8 +33,10 @@
         "postcss-loader": "^3.0.0"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "watch": "webpack --config webpack.config.js --watch"
+        "build:dev": "webpack",
+        "build:production": "cross-env NODE_ENV=production webpack",
+        "watch": "webpack --watch",
+        "poli": "polymer serve --open"
     },
     "repository": {
         "type": "git",

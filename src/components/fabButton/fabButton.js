@@ -2,7 +2,12 @@
 import { LitElement, html } from 'lit-element';
 
 // Extend the LitElement base class
-export default class Card extends LitElement {
+
+export default class FabButton extends LitElement {
+
+    constructor() {
+        super();
+    }
 
     /**
      * Implement `render` to define a template for your element.
@@ -18,11 +23,11 @@ export default class Card extends LitElement {
          * with the `html` helper function:
          */
         return html `
-         <link rel="stylesheet" href="./style.scss">
       <!-- template content -->
-      <p>A paragraph</p>
+      <link rel="stylesheet" href="./components/fabButton/fabButton.css" />
+      <button class="default">test</button>
     `;
     }
 }
 // Register the new element with the browser.
-customElements.define('m-card', Card);
+customElements.define('m-fab', FabButton);

@@ -5,16 +5,16 @@ module.exports = {
     mode: 'development',
     entry: {
         app: [path.join(__dirname, 'src', 'index.js'), path.join(__dirname, 'src/assets/scss', 'main.scss')],
-        card: [path.join(__dirname, 'src/components/card/', 'script.js'), path.join(__dirname, 'src/components/card/', 'style.scss')],
-        fabButton: [path.join(__dirname, 'src/components/fabButton/', 'script.js'), path.join(__dirname, 'src/components/fabButton/', 'style.scss')],
-        filteredContainer: [path.join(__dirname, 'src/components/filteredContainer/', 'script.js'), path.join(__dirname, 'src/components/filteredContainer/', 'style.scss')],
+        card: [path.join(__dirname, 'src/components/card/', 'card.js'), path.join(__dirname, 'src/components/card/', 'card.scss')],
+        fabButton: [path.join(__dirname, 'src/components/fabButton/', 'fabButton.js'), path.join(__dirname, 'src/components/fabButton/', 'fabButton.scss')],
+        filteredContainer: [path.join(__dirname, 'src/components/filteredContainer/', 'filteredContainer.js'), path.join(__dirname, 'src/components/filteredContainer/', 'filteredContainer.scss')],
     },
     watch: true,
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         publicPath: '/dist/',
-        filename: "components/[name]/[name].[ext]",
-        chunkFilename: 'components/[name]/[name].[ext]'
+        filename: "components/[name]/[name].js",
+        chunkFilename: 'components/[name]/[name].js'
     },
     module: {
         rules: [{
@@ -40,7 +40,7 @@ module.exports = {
             use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'css/[name].css',
+                        name: 'components/[name]/[name].css',
                     }
                 },
                 {
@@ -50,7 +50,12 @@ module.exports = {
                     loader: 'css-loader?-url'
                 },
                 {
-                    loader: 'postcss-loader'
+                    loader: 'postcss-loader',
+                    options: {
+                        config: {
+                            path: 'postcss.config.js'
+                        }
+                    }
                 },
                 {
                     loader: 'sass-loader'
@@ -71,8 +76,7 @@ module.exports = {
     plugins: [
 
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            directory: '[directory]'
+            filename: '[name].css'
         }),
     ]
 };

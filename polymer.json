@@ -1,4 +1,4 @@
 {
-  "npm": true,
-  "moduleResolution": "node"
+    "npm": true,
+    "moduleResolution": "node"
 }
