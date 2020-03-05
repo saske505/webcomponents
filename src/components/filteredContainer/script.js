@@ -1,12 +1,10 @@
 import { LitElement, html } from 'lit-element';
 
-class FilteredContainer extends LitElement {
-  render() {
-    return html
-    `<div class="container">
-        container
-    </div>`;
-  }
+export default class FilteredContainer extends LitElement {
+    render() {
+        return html `<div class="container">
+         </div>`;
+    }
 }
 
-export customElements.define('m-filteredContainer', FilteredContainer);
+customElements.define('m-filteredContainer', FilteredContainer);

@@ -1,3 +1,7 @@
-import { filteredContainer } from "./filteredContainer";
+import FilteredContainer from "./filteredContainer/script";
+import Card from './card/script';
 
-export {filteredContainer};
+export default {
+    FilteredContainer,
+    Card
+};
